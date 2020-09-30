@@ -1,2 +1,8 @@
-# cd-lab
-Compiler Design - Lab - S7 - B.Tech
+# Compiler Design - Lab
+#### Academic - Lab - Experiments
+##### Using Lex and Yacc
+<hr>
+
+Programs : 
+- Counting Vowels and Consonants
+- Counting Lines and Characters
