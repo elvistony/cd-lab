@@ -4,6 +4,8 @@
 <hr>
 
 Programs : 
-- Counting Vowels and Consonants
-- Counting Lines and Characters
+- Lab 1) Counting Vowels and Consonants
+- Lab 2) Counting Lines and Characters
+- Lab 3) Infix Calculator
+- Lab 4) Capitalize Keywords
 - ..coming up
