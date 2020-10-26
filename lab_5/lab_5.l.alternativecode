@@ -1,0 +1,35 @@
+%{
+#include<stdio.h>
+int pre=0,num=0,key=0,op=0,a=0,id=0,c=0,b=0;
+%}
+keyword main|int|scanf|printf|else|return|char
+ope  "+"|"-"|"*"|"/"|"="
+%%
+[#] {fprintf(yyout,"%s",yytext); pre++;}
+[0-9]+ {fprintf(yyout,"%s",yytext); num++;}
+{keyword} {fprintf(yyout,"%s",yytext); key++;}
+{ope} {fprintf(yyout,"%s",yytext); op++;}
+[a-zA-Z][a-zA-Z0-9]* {fprintf(yyout,"%s",yytext); id++;}
+"//".* {a++;}
+"/*"(.*\n)*"*/" {c++;}
+[\n \t] {fprintf(yyout,"%s",yytext);}
+[' '] {;}
+%%
+
+int yywrap()
+{
+return 1;
+}
+int main()
+{
+yyin=fopen("in.c","r");
+yyout=fopen("ou.c","w");
+yylex();
+printf("No of keywords:%d \n",key);
+printf("No of operators:%d \n",op);
+printf("No of Comments:%d => (single-line:%d) + (multi-line:%d) \n",a+c,a,c);
+printf("No of Identifiers:%d \n",id);
+printf("No of Numbers:%d \n",num);
+printf("No of Preprocessor Directives:%d \n",pre);
+return 0;
+}
