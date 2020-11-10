@@ -10,4 +10,5 @@ Programs :
 - Lab 4) Capitalize Keywords
 - Lab 5)
 - Lab 6)
+- Lab 7)
 - ..coming up
