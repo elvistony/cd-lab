@@ -1,7 +1,6 @@
 %{
 #include "y.tab.h"
 %}
- 
 
 %%
 [A-Za-z]+|[0-9]+|[-+][0-9]+ return A;
